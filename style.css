@@ -1,155 +1,98 @@
-/* Reset e base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background: #fff;
-    color: #0f172a;
-    line-height: 1.6;
-  }
-  
-  /* Navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .navbar nav a {
-    margin-left: 1rem;
-    text-decoration: none;
-    color: #0f172a;
-    font-weight: bold;
-  }
-  
-  .btn-outline {
-    padding: 0.5rem 1rem;
-    border: 2px solid #7c3aed;
-    border-radius: 20px;
-    color: #7c3aed;
-    transition: background 0.3s;
-  }
-  
-  .btn-outline:hover {
-    background: #7c3aed;
-    color: white;
-  }
-  
-  /* Seção Hero (intro com avatar) */
-  .hero {
-    padding: 4rem 2rem 2rem;
-    text-align: center;
-  }
-  
-  .hero h1 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin-bottom: 1rem;
-  }
-  
-  .hero p {
-    font-size: 1.1rem;
-    color: #475569;
-    margin-bottom: 2rem;
-  }
-  
-  .avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: #7c3aed;
-    padding: 10px;
-    object-fit: cover;
-  }
-  
-  /* Imagem no topo */
-  .imagem-topo {
-    background: #fff;
-    text-align: center;
-    padding: 0;
-    margin-bottom: -20px;
-  }
-  
-  .imagem-topo img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-  
-  /* Seção roxa (intro) */
-  .intro {
-    background: #6d28d9;
-    color: white;
-    text-align: center;
-    padding: 4rem 2rem 6rem;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .intro h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .intro p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-  }
-  
-  /* Seção sobre com cards */
-  .sobre {
-    margin-top: -80px;
-    background: white;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    padding: 4rem 2rem;
-    position: relative;
-    z-index: 2;
-  }
-  
-  .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    text-align: center; /* centraliza conteúdo interno */
-  }
-  
-  .card {
-    background: #f9f9f9;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    max-width: 300px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* alinha todo o conteúdo no centro */
-  }
-  
-  .card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-  }
-  
-  .card p {
-    margin: 0.5rem 0;
-    font-size: 0.95rem;
-  }
-  
-  /* Rodapé */
-  footer {
-    text-align: center;
-    padding: 2rem;
-    color: #666;
-    font-size: 0.9rem;
-  }
-  
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  background-color: #7c3aed;
+  border-radius: 50%;
+  padding: 12px;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.illustration {
+  margin-top: 2rem;
+}
+
+.illustration img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.intro {
+  background-color: #7c3aed !important;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.intro h2,
+.intro p {
+  color: #ffffff !important;
+}
+
+.intro p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.cards-overlap {
+  margin-top: -80px;
+  z-index: 2;
+  position: relative;
+  padding-top: 4rem;
+}
+
+.box {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+.icon {
+  margin-bottom: 1rem;
+}
+
+.diga-ola-button {
+  color: #7c3aed !important;
+  border: 2px solid #7c3aed !important;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.diga-ola-button:hover {
+  background-color: #7c3aed !important;
+  color: white !important;
+}
+
+.project-tile {
+  background-color: #f0f0f0;
+  height: 180px;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.project-tile:hover {
+  transform: scale(1.03);
+}
+
+.show-more-button {
+  border-color: #7c3aed !important;
+  color: #7c3aed !important;
+}
+
+.show-more-button:hover {
+  background-color: #7c3aed !important;
+  color: white !important;
+}
