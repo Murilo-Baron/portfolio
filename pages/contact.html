@@ -7,35 +7,24 @@
   <meta name="description" content="Entre em contato com Murilo Baron - Designer, Frontend Developer & DevOps">
   <title>Contato • Murilo Baron</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="../assets/images/logo-new.png" type="image/png">
-  <!-- Open Graph Tags -->
   <meta property="og:title" content="Contato • Murilo Baron">
   <meta property="og:description" content="Entre em contato com Murilo Baron - Designer, Frontend Developer & DevOps">
   <meta property="og:image" content="../assets/images/tech-illustration-fixed.png">
   <meta property="og:url" content="https://murilobaron.com/contact">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Bulma CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <!-- AOS - Animate On Scroll -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <!-- Seus estilos customizados -->
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 
 <body>
-  <!-- Navbar -->
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
@@ -59,23 +48,17 @@
     </div>
   </nav>
 
-  <!-- Contact Section -->
   <section class="section contact-section">
     <div class="container">
       <div class="columns is-centered">
-        <!-- Troque is-8-desktop por is-12-desktop (ou is-full) para o form expandir toda a largura do container -->
         <div class="column is-10-tablet is-8-desktop">
-
-          <!-- Título e legenda -->
           <h1 class="title is-2 has-text-centered" data-aos="fade-up">Vamos conversar</h1>
           <p class="subtitle is-5 has-text-centered mb-6" data-aos="fade-up" data-aos-delay="100">
             Tem um projeto em mente? Preencha o formulário abaixo ou entre em contato diretamente.
           </p>
 
-          <!-- Box do formulário -->
           <div class="box contact-form-box" data-aos="fade-up" data-aos-delay="200">
             <form class="contact-form" id="contactForm" action="https://formsubmit.co/murilopereira1461@gmail.com" method="POST">
-              <!-- Configurações ocultas do FormSubmit -->
               <input type="hidden" name="_subject" value="Nova mensagem do site">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_next" value="https://murilobaron.com/pages/obrigado.html">
@@ -126,16 +109,9 @@
               </div>
             </form>
           </div>
-          <!-- FIM .box contact-form-box -->
-
-        </div> <!-- fecha .column -->
-      </div> <!-- fecha .columns -->
-    </div> <!-- fecha .container -->
-
-    <!-- ████████████████████████████████████████████████████████████████████ -->
-    <!--   Agora o footer está logo abaixo desse fechamento de container/columns  -->
-    <!--   Ele continua DENTRO do <body>, mas FORA de qualquer “.container” do Bulma  -->
-    <!-- ████████████████████████████████████████████████████████████████████ -->
+        </div>
+      </div>
+    </div>
 
     <footer class="footer has-text-centered">
       <div class="content">
@@ -161,13 +137,9 @@
         <p>Feito com <span class="has-text-secondary">💜</span> por Murilo Baron Pereira.</p>
       </div>
     </footer>
-    <!-- ████████████████████████████████████████████████████████████████████ -->
-
   </section>
 
-  <!-- AOS - Animate On Scroll -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <!-- Scripts customizados -->
   <script src="../assets/js/script.js"></script>
   <script>
     AOS.init({
@@ -176,7 +148,6 @@
       offset: 100
     });
 
-    // Validação do formulário
     document.addEventListener('DOMContentLoaded', function () {
       const contactForm = document.getElementById('contactForm');
       const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
@@ -237,7 +208,6 @@
       }
     });
   </script>
-
 </body>
 
 </html>
