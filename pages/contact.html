@@ -9,7 +9,6 @@
 
   <!-- Favicon -->
   <link rel="icon" href="../assets/images/logo-new.png" type="image/png">
-  
   <!-- Open Graph Tags -->
   <meta property="og:title" content="Contato • Murilo Baron">
   <meta property="og:description" content="Entre em contato com Murilo Baron - Designer, Frontend Developer & DevOps">
@@ -31,12 +30,11 @@
   <!-- AOS - Animate On Scroll -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-  <!-- Estilos customizados -->
+  <!-- Seus estilos customizados -->
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 
 <body>
-
   <!-- Navbar -->
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="container">
@@ -65,27 +63,29 @@
   <section class="section contact-section">
     <div class="container">
       <div class="columns is-centered">
+        <!-- Troque is-8-desktop por is-12-desktop (ou is-full) para o form expandir toda a largura do container -->
         <div class="column is-10-tablet is-8-desktop">
+
+          <!-- Título e legenda -->
           <h1 class="title is-2 has-text-centered" data-aos="fade-up">Vamos conversar</h1>
           <p class="subtitle is-5 has-text-centered mb-6" data-aos="fade-up" data-aos-delay="100">
             Tem um projeto em mente? Preencha o formulário abaixo ou entre em contato diretamente.
           </p>
 
+          <!-- Box do formulário -->
           <div class="box contact-form-box" data-aos="fade-up" data-aos-delay="200">
             <form class="contact-form" id="contactForm" action="https://formsubmit.co/murilopereira1461@gmail.com" method="POST">
-              <!-- FormSubmit configuração -->
+              <!-- Configurações ocultas do FormSubmit -->
               <input type="hidden" name="_subject" value="Nova mensagem do site">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_next" value="https://murilobaron.com/pages/obrigado.html">
               <input type="hidden" name="_captcha" value="false">
-              
+
               <div class="field">
                 <label class="label" for="name">Nome</label>
                 <div class="control has-icons-left">
                   <input class="input" type="text" id="name" name="name" placeholder="Seu nome" required>
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-user"></i>
-                  </span>
+                  <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
                   <p class="help is-danger error-message" style="display: none;">Por favor, informe seu nome</p>
                 </div>
               </div>
@@ -94,9 +94,7 @@
                 <label class="label" for="email">Email</label>
                 <div class="control has-icons-left">
                   <input class="input" type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-envelope"></i>
-                  </span>
+                  <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
                   <p class="help is-danger error-message" style="display: none;">Por favor, informe um email válido</p>
                 </div>
               </div>
@@ -105,9 +103,7 @@
                 <label class="label" for="subject">Assunto</label>
                 <div class="control has-icons-left">
                   <input class="input" type="text" id="subject" name="subject" placeholder="Do que se trata?" required>
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-tag"></i>
-                  </span>
+                  <span class="icon is-small is-left"><i class="fas fa-tag"></i></span>
                   <p class="help is-danger error-message" style="display: none;">Por favor, informe o assunto</p>
                 </div>
               </div>
@@ -123,79 +119,56 @@
               <div class="field">
                 <div class="control has-text-centered">
                   <button type="submit" class="button submit-button">
-                    <span class="icon">
-                      <i class="fas fa-paper-plane"></i>
-                    </span>
+                    <span class="icon"><i class="fas fa-paper-plane"></i></span>
                     <span>Enviar mensagem</span>
                   </button>
                 </div>
               </div>
             </form>
           </div>
+          <!-- FIM .box contact-form-box -->
 
-          <div class="columns is-centered mt-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="column is-4 has-text-centered">
-              <div class="icon is-large has-text-primary mb-3">
-                <i class="fas fa-envelope fa-2x"></i>
-              </div>
-              <p class="is-size-5 has-text-weight-semibold">Email</p>
-              <p><a href="mailto:murilopereira1461@gmail.com">murilopereira1461@gmail.com</a></p>
-            </div>
-            <div class="column is-4 has-text-centered">
-              <div class="icon is-large has-text-primary mb-3">
-                <i class="fas fa-map-marker-alt fa-2x"></i>
-              </div>
-              <p class="is-size-5 has-text-weight-semibold">Localização</p>
-              <p>São Paulo, Brasil</p>
-            </div>
-            <div class="column is-4 has-text-centered">
-              <div class="icon is-large has-text-primary mb-3">
-                <i class="fas fa-share-alt fa-2x"></i>
-              </div>
-              <p class="is-size-5 has-text-weight-semibold">Social</p>
-              <div class="buttons is-centered mt-2">
-                <a href="#" class="button is-small is-rounded">
-                  <span class="icon"><i class="fab fa-twitter"></i></span>
-                </a>
-                <a href="#" class="button is-small is-rounded">
-                  <span class="icon"><i class="fab fa-linkedin"></i></span>
-                </a>
-                <a href="#" class="button is-small is-rounded">
-                  <span class="icon"><i class="fab fa-github"></i></span>
-                </a>
-              </div>
-            </div>
-          </div>
+        </div> <!-- fecha .column -->
+      </div> <!-- fecha .columns -->
+    </div> <!-- fecha .container -->
+
+    <!-- ████████████████████████████████████████████████████████████████████ -->
+    <!--   Agora o footer está logo abaixo desse fechamento de container/columns  -->
+    <!--   Ele continua DENTRO do <body>, mas FORA de qualquer “.container” do Bulma  -->
+    <!-- ████████████████████████████████████████████████████████████████████ -->
+
+    <footer class="footer has-text-centered">
+      <div class="content">
+        <img src="../assets/images/logo-new.png" alt="Murilo Baron" width="40">
+        <p class="mt-4">Vivendo, aprendendo e evoluindo um dia de cada vez.</p>
+        <div class="buttons is-centered social-buttons">
+          <a href="https://x.com/Barondeveloper" class="button is-white is-inverted" aria-label="Twitter">
+            <span class="icon"><i class="fab fa-twitter"></i></span>
+          </a>
+          <a href="https://github.com/Murilo-Baron" class="button is-white is-inverted" aria-label="GitHub">
+            <span class="icon"><i class="fab fa-github"></i></span>
+          </a>
+          <a href="https://www.linkedin.com/in/murilo-baron-pereira" class="button is-white is-inverted" aria-label="LinkedIn">
+            <span class="icon"><i class="fab fa-linkedin"></i></span>
+          </a>
+          <a href="https://www.instagram.com/rilobaron/?next=%2F" class="button is-white is-inverted" aria-label="Instagram">
+            <span class="icon"><i class="fab fa-instagram"></i></span>
+          </a>
+          <a href="./pages/contact.html" class="button is-white is-inverted" aria-label="Email">
+            <span class="icon"><i class="fas fa-envelope"></i></span>
+          </a>
         </div>
+        <p>Feito com <span class="has-text-secondary">💜</span> por Murilo Baron.</p>
       </div>
-    </div>
-  </section>
+    </footer>
+    <!-- ████████████████████████████████████████████████████████████████████ -->
 
-  <!-- Footer -->
-  <footer class="footer has-text-centered">
-    <div class="content">
-      <img src="../assets/images/logo-new.png" alt="Murilo Baron" width="40">
-      <p class="mt-4">Vivendo, aprendendo e evoluindo um dia de cada vez.</p>
-      
-      <div class="footer-social">
-        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
-      </div>
-      
-      <p>Feito com <span class="has-text-secondary">💜</span> por Murilo Baron.</p>
-    </div>
-  </footer>
+  </section>
 
   <!-- AOS - Animate On Scroll -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
   <!-- Scripts customizados -->
   <script src="../assets/js/script.js"></script>
-
-  <!-- Inicializar AOS -->
   <script>
     AOS.init({
       duration: 800,
@@ -209,72 +182,50 @@
       const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
       const errorMessages = contactForm.querySelectorAll('.error-message');
 
-      // Função para validar email
       function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
       }
 
-      // Adicionar validação em tempo real para cada campo
       inputs.forEach((input, index) => {
-        input.addEventListener('blur', function() {
+        input.addEventListener('blur', function () {
           validateField(input, index);
         });
-        
-        input.addEventListener('input', function() {
+        input.addEventListener('input', function () {
           if (input.classList.contains('is-danger')) {
             validateField(input, index);
           }
         });
       });
 
-      // Função para validar um campo específico
       function validateField(input, index) {
         let isValid = true;
-        
         if (input.type === 'email') {
           isValid = isValidEmail(input.value.trim());
         } else {
           isValid = input.value.trim() !== '';
         }
-        
         if (!isValid) {
           input.classList.add('is-danger');
-          if (errorMessages[index]) {
-            errorMessages[index].style.display = 'block';
-          }
+          if (errorMessages[index]) errorMessages[index].style.display = 'block';
         } else {
           input.classList.remove('is-danger');
-          if (errorMessages[index]) {
-            errorMessages[index].style.display = 'none';
-          }
+          if (errorMessages[index]) errorMessages[index].style.display = 'none';
         }
-        
         return isValid;
       }
 
-      // Validação no envio do formulário
       if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
           let formIsValid = true;
-          
-          // Validar todos os campos
           inputs.forEach((input, index) => {
-            if (!validateField(input, index)) {
-              formIsValid = false;
-            }
+            if (!validateField(input, index)) formIsValid = false;
           });
-          
-          if (!formIsValid) {
-            e.preventDefault();
-            return;
-          }
+          if (!formIsValid) e.preventDefault();
         });
       }
 
-      // Toggle mobile menu
       const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
       if (navbarBurgers.length > 0) {
         navbarBurgers.forEach(el => {
           el.addEventListener('click', () => {
@@ -286,6 +237,7 @@
       }
     });
   </script>
+
 </body>
 
 </html>
