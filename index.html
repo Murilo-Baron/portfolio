@@ -2,143 +2,359 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Murilo Baron • Portfólio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfólio de Murilo Baron - Designer, Frontend Developer & DevOps">
+  <title>Murilo Baron • Designer & Desenvolvedor</title>
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <!-- Bulma CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="style.css" />
+  
+  <!-- AOS - Animate On Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  <!-- Estilos customizados -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar is-transparent">
-    <div class="container is-flex is-justify-content-space-between is-align-items-center">
-      <a class="navbar-item" href="#">
-        <img src="logo.svg" alt="Logo" style="height: 32px;">
-      </a>
-      <div class="navbar-end">
-        <a class="navbar-item" href="#projetos">Projetos</a>
-        <a class="navbar-item button diga-ola-button" href="#contato">Diga Olá</a>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <img src="assets/images/logo-new.png" alt="Murilo Baron" width="40">
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#sobre">Sobre</a>
+          <a class="navbar-item" href="#projetos">Projetos</a>
+          <a class="navbar-item" href="#testimonials">Depoimentos</a>
+          <a class="navbar-item button is-primary" href="pages/contact.html">Diga Olá</a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Seção principal -->
-  <section class="section has-text-centered">
-    <div class="container is-max-desktop">
-      <h1 class="title is-2 has-text-weight-bold">Designer, Frontend Developer & Implantador</h1>
-      <p class="subtitle is-5">Eu crio interfaces incríveis, desenvolvo aplicações modernas e implemento sistemas de automação para negócios.</p>
-      <div class="avatar-wrapper">
-        <img src="imagem/avatar.png" alt="Meu Avatar" class="avatar">
-      </div>
-      <div class="illustration">
-        <img src="imagem/hero-devices.svg" alt="Ilustração de tecnologia">
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção roxa -->
-  <section class="section intro">
+  <!-- Hero Principal -->
+  <section class="section has-text-centered hero-main" id="home">
     <div class="container">
-      <h2 class="title is-4">Oi, sou Murilo Baron. Prazer em te conhecer.</h2>
-      <p class="subtitle is-6">
-        Desde que comecei minha jornada como programador a 3 anos, já trabalhei remotamente para agências, startups, e colaborei com pessoas talentosas para criar produtos digitais. Sou naturalmente curioso e estou sempre melhorando minhas habilidades.
+      <h1 class="title is-2 has-text-weight-bold" data-aos="fade-up">
+        Designer, Frontend Developer & DevOps
+      </h1>
+      <p class="subtitle is-5" data-aos="fade-up" data-aos-delay="100">
+        Eu crio interfaces incríveis, desenvolvo aplicações modernas e implemento soluções de automação.
       </p>
+      <div class="avatar-wrapper" data-aos="zoom-in" data-aos-delay="200">
+        <img src="assets/images/avatar.png" alt="Murilo Baron" class="avatar" />
+      </div>
+      <div class="tech-illustration-container" data-aos="fade-up" data-aos-delay="300">
+        <img src="assets/images/tech-illustration-fixed.png" alt="Tecnologia" class="tech-illustration" />
+      </div>
     </div>
   </section>
 
-  <!-- Cards -->
-  <section id="sobre" class="section cards-overlap">
+  <!-- Hero roxo de introdução -->
+  <section class="hero is-medium hero-intro" id="sobre">
+    <div class="hero-body has-text-centered">
+      <div class="container">
+        <h2 class="title is-3" data-aos="fade-up">Oi, sou Murilo Baron. Prazer em te conhecer.</h2>
+        <p class="subtitle is-5 mx-auto" style="max-width:700px" data-aos="fade-up" data-aos-delay="100">
+          Desde que comecei minha jornada como programador há 3 anos, já trabalhei remotamente para agências, startups e colaborei com pessoas talentosas para criar produtos digitais. Sou naturalmente curioso, apaixonado por design e estou sempre buscando aprimorar minhas habilidades para entregar soluções que combinam estética e funcionalidade.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards sobrepostos -->
+  <section class="section cards-overlap">
     <div class="container">
-      <div class="columns is-multiline has-text-centered">
-        <!-- Card 1 -->
-        <div class="column is-one-third">
-          <div class="box">
-            <span class="icon is-large has-text-success"><i class="fas fa-pencil-ruler fa-2x"></i></span>
-            <h3 class="title is-5">Designer</h3>
-            <p>Gosto de criar interfaces simples, com boa estrutura e foco na experiência do usuário.</p>
-            <p class="has-text-primary mt-3"><strong>O que eu gosto de desenhar:</strong><br> UX, UI, Web, Apps, Logos</p>
-            <p><strong>Ferramentas:</strong><br>Affinity Designer, Figma, Pen & Paper, Sketch</p>
+      <div class="columns is-multiline is-variable is-6">
+        <!-- Designer -->
+        <div class="column is-4-desktop is-12-mobile" data-aos="fade-up">
+          <div class="box has-text-centered">
+            <span class="icon is-large has-text-success">
+              <i class="fas fa-pencil-ruler fa-3x"></i>
+            </span>
+            <h3 class="title is-4">Designer</h3>
+            <p>Gosto de criar interfaces simples, com boa estrutura e foco na experiência do usuário, transformando conceitos em designs intuitivos e atraentes.</p>
+            <p class="mt-4"><strong class="has-text-primary">O que eu gosto de desenhar:</strong></p>
+            <p>UX, UI, Web, Apps, Logos</p>
+            <p class="mt-3"><strong>Ferramentas:</strong></p>
+            <p>Affinity Designer, Figma, Pen & Paper, Sketch</p>
           </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="column is-one-third">
-          <div class="box">
-            <span class="icon is-large has-text-info"><i class="fas fa-laptop-code fa-2x"></i></span>
-            <h3 class="title is-5">Frontend Developer</h3>
-            <p>Gosto de codar do zero e trazer ideias à vida no navegador.</p>
-            <p class="has-text-primary mt-3"><strong>Linguagens:</strong><br> HTML, Pug, Slim, CSS, Sass, Git</p>
-            <p><strong>Dev Tools:</strong><br>Astro, Bitbucket, Bootstrap, Bulma, Github, Tailwind, VS Code</p>
+        <!-- Frontend -->
+        <div class="column is-4-desktop is-12-mobile" data-aos="fade-up" data-aos-delay="100">
+          <div class="box has-text-centered">
+            <span class="icon is-large has-text-info">
+              <i class="fas fa-laptop-code fa-3x"></i>
+            </span>
+            <h3 class="title is-4">Frontend Developer</h3>
+            <p>Gosto de codar do zero e trazer ideias à vida no navegador, criando experiências interativas e responsivas que funcionam em qualquer dispositivo.</p>
+            <p class="mt-4"><strong class="has-text-primary">Linguagens:</strong></p>
+            <p>HTML, CSS, JavaScript, Sass, Git</p>
+            <p class="mt-3"><strong>Dev Tools:</strong></p>
+            <p>Astro, Bitbucket, Bootstrap, Bulma, GitHub, Tailwind, VS Code</p>
           </div>
         </div>
-
-        <!-- Card 3 -->
-        <div class="column is-one-third">
-          <div class="box">
-            <span class="icon is-large has-text-warning"><i class="fas fa-cogs fa-2x"></i></span>
-            <h3 class="title is-5">Implantador</h3>
-            <p>Automatizo processos com CRMs e ferramentas de marketing.</p>
-            <p class="has-text-primary mt-3"><strong>Plataformas:</strong><br>SprintHub, Manychat</p>
-            <p><strong>Experiência:</strong><br>Funis, automações, integrações com APIs</p>
+        <!-- DevOps -->
+        <div class="column is-4-desktop is-12-mobile" data-aos="fade-up" data-aos-delay="200">
+          <div class="box has-text-centered">
+            <span class="icon is-large has-text-warning">
+              <i class="fas fa-server fa-3x"></i>
+            </span>
+            <h3 class="title is-4">DevOps</h3>
+            <p>Implemento pipelines de CI/CD e automatizo processos de desenvolvimento, garantindo entregas contínuas e infraestrutura escalável.</p>
+            <p class="mt-4"><strong class="has-text-primary">Tecnologias:</strong></p>
+            <p>Docker, Kubernetes, Jenkins, GitHub Actions</p>
+            <p class="mt-3"><strong>Experiência:</strong></p>
+            <p>Automação, CI/CD, Cloud, Monitoramento, Infraestrutura como código</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projetos -->
-  <section id="projetos" class="section has-text-centered">
+  <!-- Projetos Recentes -->
+  <section id="projetos" class="section project-section has-text-centered">
     <div class="container">
-      <h2 class="title is-4">Meus Projetos Recentes</h2>
-      <p class="subtitle is-6">Alguns trabalhos de design que já realizei. Quer ver mais? <a href="#">Entre em contato</a>.</p>
-      <div class="columns is-multiline is-centered is-variable is-4">
-        <div class="column is-one-third"><div class="project-tile"></div></div>
-        <div class="column is-one-third"><div class="project-tile"></div></div>
-        <div class="column is-one-third"><div class="project-tile"></div></div>
-        <div class="column is-one-third"><div class="project-tile"></div></div>
-        <div class="column is-one-third"><div class="project-tile"></div></div>
-        <div class="column is-one-third"><div class="project-tile"></div></div>
+      <h2 class="title is-3" data-aos="fade-up">Meus Projetos Recentes</h2>
+      <p class="subtitle is-5" data-aos="fade-up" data-aos-delay="100">
+        Aqui estão alguns trabalhos recentes que desenvolvi. Quer ver mais?
+        <a href="pages/contact.html" class="has-text-primary">Entre em contato</a>.
+      </p>
+      <div class="columns is-multiline is-variable is-5 is-centered" data-aos="fade-up" data-aos-delay="200">
+        <!-- Projeto 1 -->
+        <div class="column is-4-desktop is-6-tablet">
+          <div class="project-tile" style="background-image: url('assets/images/projects/project1.jpg')">
+            <div class="project-overlay">
+              <h3 class="project-title">Website Corporativo</h3>
+              <p class="project-description">Redesign completo do site institucional com foco em conversão</p>
+              <div class="project-links">
+                <a href="#" target="_blank">Ver Projeto</a>
+                <a href="#" target="_blank">Ver Código</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Projeto 2 -->
+        <div class="column is-4-desktop is-6-tablet">
+          <div class="project-tile" style="background-image: url('assets/images/projects/project2.jpg')">
+            <div class="project-overlay">
+              <h3 class="project-title">Dashboard Analytics</h3>
+              <p class="project-description">Interface de usuário para sistema de gestão empresarial</p>
+              <div class="project-links">
+                <a href="#" target="_blank">Ver Projeto</a>
+                <a href="#" target="_blank">Ver Código</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Projeto 3 -->
+        <div class="column is-4-desktop is-6-tablet">
+          <div class="project-tile" style="background-image: url('assets/images/projects/project3.jpg')">
+            <div class="project-overlay">
+              <h3 class="project-title">E-commerce</h3>
+              <p class="project-description">Desenvolvimento frontend para loja virtual de moda</p>
+              <div class="project-links">
+                <a href="#" target="_blank">Ver Projeto</a>
+                <a href="#" target="_blank">Ver Código</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Projeto 4 -->
+        <div class="column is-4-desktop is-6-tablet">
+          <div class="project-tile" style="background-image: url('assets/images/projects/project4.jpg')">
+            <div class="project-overlay">
+              <h3 class="project-title">App Fitness</h3>
+              <p class="project-description">Design de interface para aplicativo de monitoramento de atividades físicas</p>
+              <div class="project-links">
+                <a href="#" target="_blank">Ver Projeto</a>
+                <a href="#" target="_blank">Ver Código</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Projeto 5 -->
+        <div class="column is-4-desktop is-6-tablet">
+          <div class="project-tile" style="background-image: url('assets/images/projects/project5.jpg')">
+            <div class="project-overlay">
+              <h3 class="project-title">Landing Page SaaS</h3>
+              <p class="project-description">Página de conversão para produto digital com alta taxa de conversão</p>
+              <div class="project-links">
+                <a href="#" target="_blank">Ver Projeto</a>
+                <a href="#" target="_blank">Ver Código</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Projeto 6 -->
+        <div class="column is-4-desktop is-6-tablet">
+          <div class="project-tile" style="background-image: url('assets/images/projects/project6.jpg')">
+            <div class="project-overlay">
+              <h3 class="project-title">DevOps Dashboard</h3>
+              <p class="project-description">Painel de monitoramento para pipelines CI/CD e infraestrutura</p>
+              <div class="project-links">
+                <a href="#" target="_blank">Ver Projeto</a>
+                <a href="#" target="_blank">Ver Código</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="has-text-centered mt-5">
-        <a href="https://github.com/seuusuario" target="_blank" class="button is-outlined is-primary show-more-button">
-          <span class="icon"><i class="fab fa-github"></i></span>
-          <span>Ver mais no GitHub</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Colaboradores -->
-  <section class="section has-text-centered">
-    <div class="container">
-      <h2 class="title is-5">Tenho orgulho de ter colaborado com essas empresas:</h2>
-      <div class="columns is-multiline is-centered is-variable is-6 mt-5">
-        <div class="column is-one-third"><img src="logos/logo1.png" alt="Logo 1"></div>
-        <div class="column is-one-third"><img src="logos/logo2.png" alt="Logo 2"></div>
-        <div class="column is-one-third"><img src="logos/logo3.png" alt="Logo 3"></div>
-        <div class="column is-one-third"><img src="logos/logo4.png" alt="Logo 4"></div>
-        <div class="column is-one-third"><img src="logos/logo5.png" alt="Logo 5"></div>
-        <div class="column is-one-third"><img src="logos/logo6.png" alt="Logo 6"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contato final -->
-  <section class="section has-text-centered">
-    <div class="container">
-      <h2 class="title is-5">Interessado em colaborar comigo?</h2>
-      <p class="subtitle is-6">Estou sempre aberto para discutir design de produto ou oportunidades de parceria.</p>
-      <a href="#contato" class="button is-outlined is-primary show-more-button mt-4">
-        <span class="icon"><i class="fas fa-comments"></i></span>
-        <span>Iniciar uma conversa</span>
+      <a href="https://github.com/murilobaron" class="button is-outlined is-primary mt-5" data-aos="fade-up" data-aos-delay="300">
+        <span class="icon"><i class="fab fa-github"></i></span>
+        <span>Ver mais no GitHub</span>
       </a>
     </div>
   </section>
 
+  <!-- Testimonials -->
+  <section id="testimonials" class="section has-text-centered">
+    <div class="container">
+      <h2 class="title is-3" data-aos="fade-up">Depoimentos</h2>
+      <p class="subtitle is-5" data-aos="fade-up" data-aos-delay="100">O que meus clientes e parceiros dizem sobre meu trabalho</p>
+      
+      <div class="testimonial-item mx-auto" data-aos="fade-up" data-aos-delay="200" style="display: block;">
+        <figure class="image is-96x96 is-inline-block">
+          <img class="is-rounded" src="assets/images/client1.jpg" alt="Cliente">
+        </figure>
+        <blockquote class="mt-4">
+          "Trabalhar com o Murilo foi uma experiência incrível. Ele entendeu perfeitamente nossas necessidades e entregou um design que superou todas as expectativas. Sua atenção aos detalhes e capacidade de transformar conceitos em interfaces funcionais é impressionante."
+        </blockquote>
+        <p class="has-text-weight-semibold mt-3">Ana Luiza Mendes</p>
+        <p class="is-size-7">Diretora de Marketing, TechSolutions</p>
+      </div>
+      
+      <div class="testimonial-item mx-auto" data-aos="fade-up" data-aos-delay="200" style="display: none;">
+        <figure class="image is-96x96 is-inline-block">
+          <img class="is-rounded" src="assets/images/client2.jpg" alt="Cliente">
+        </figure>
+        <blockquote class="mt-4">
+          "O Murilo é um profissional extremamente talentoso e dedicado. Ele não apenas desenvolveu um site incrível para nossa empresa, mas também nos ajudou a automatizar diversos processos internos, aumentando significativamente nossa produtividade."
+        </blockquote>
+        <p class="has-text-weight-semibold mt-3">Ricardo Oliveira</p>
+        <p class="is-size-7">CEO, Inovare Soluções</p>
+      </div>
+      
+      <div class="testimonial-item mx-auto" data-aos="fade-up" data-aos-delay="200" style="display: none;">
+        <figure class="image is-96x96 is-inline-block">
+          <img class="is-rounded" src="assets/images/client3.jpg" alt="Cliente">
+        </figure>
+        <blockquote class="mt-4">
+          "Contratamos o Murilo para redesenhar nossa identidade visual e implementar um novo site. O resultado foi simplesmente fantástico! Além de entregar um trabalho de altíssima qualidade, ele foi extremamente atencioso durante todo o processo."
+        </blockquote>
+        <p class="has-text-weight-semibold mt-3">Carla Rodrigues</p>
+        <p class="is-size-7">Gerente de Projetos, CreativeLab</p>
+      </div>
+      
+      <div class="testimonial-dots mt-4" data-aos="fade-up" data-aos-delay="300">
+        <span class="dot is-active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Start a project -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-bar mx-auto" data-aos="fade-up">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <h3 class="title is-4 has-text-white">Vamos trabalhar juntos?</h3>
+            <p>Interessado em colaborar em um projeto? Vamos conversar sobre como posso ajudar a transformar suas ideias em realidade.</p>
+          </div>
+          <div class="column is-narrow">
+            <a href="pages/contact.html" class="button cta-button">
+              <span class="icon"><i class="fas fa-paper-plane"></i></span>
+              <span>Vamos conversar</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer has-text-centered">
+    <div class="content">
+      <img src="assets/images/logo-new.png" alt="Murilo Baron" width="40">
+      <p class="mt-4">Vivendo, aprendendo e evoluindo um dia de cada vez.</p>
+      <div class="buttons is-centered social-buttons">
+        <a href="#" class="button is-white is-inverted" aria-label="Twitter">
+          <span class="icon"><i class="fab fa-twitter"></i></span>
+        </a>
+        <a href="#" class="button is-white is-inverted" aria-label="GitHub">
+          <span class="icon"><i class="fab fa-github"></i></span>
+        </a>
+        <a href="#" class="button is-white is-inverted" aria-label="LinkedIn">
+          <span class="icon"><i class="fab fa-linkedin"></i></span>
+        </a>
+        <a href="#" class="button is-white is-inverted" aria-label="Instagram">
+          <span class="icon"><i class="fab fa-instagram"></i></span>
+        </a>
+        <a href="pages/contact.html" class="button is-white is-inverted" aria-label="Email">
+          <span class="icon"><i class="fas fa-envelope"></i></span>
+        </a>
+      </div>
+      <p>Feito com <span class="has-text-secondary">💜</span> por Murilo Baron.</p>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <a href="#" id="back-to-top" class="button is-primary is-rounded" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 99;">
+    <span class="icon">
+      <i class="fas fa-arrow-up"></i>
+    </span>
+  </a>
+
+  <!-- AOS - Animate On Scroll -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  
+  <!-- Scripts customizados -->
+  <script src="assets/js/script.js"></script>
+  
+  <!-- Inicializar AOS -->
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+    
+    // Botão voltar ao topo
+    window.addEventListener('scroll', function() {
+      const backToTop = document.getElementById('back-to-top');
+      if (window.scrollY > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+    
+    document.getElementById('back-to-top').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
 </html>
