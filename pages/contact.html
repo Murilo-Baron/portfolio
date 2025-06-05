@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Entre em contato com Murilo Baron - Designer, Frontend Developer & DevOps">
-  <title>Contato • Murilo Baron</title>
+  <title data-i18n="contact_page_title">Contato • Murilo Baron</title>
 
   <link rel="icon" href="../assets/images/logo-new.png" type="image/png">
   <meta property="og:title" content="Contato • Murilo Baron">
@@ -22,6 +22,15 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <style>
+    @media (max-width: 768px) {
+      .footer .buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -32,17 +41,15 @@
           <img src="../assets/images/logo-new.png" alt="Murilo Baron" width="40">
         </a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
         </a>
       </div>
       <div id="navMenu" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item" href="../index.html#sobre">Sobre</a>
-          <a class="navbar-item" href="../index.html#projetos">Projetos</a>
-          <a class="navbar-item" href="../index.html#testimonials">Depoimentos</a>
-          <a class="navbar-item button is-primary" href="#">Diga Olá</a>
+          <a class="navbar-item" href="../index.html#sobre" data-i18n="nav_about">Sobre</a>
+          <a class="navbar-item" href="../index.html#projetos" data-i18n="nav_projects">Projetos</a>
+          <a class="navbar-item" href="../index.html#testimonials" data-i18n="nav_testimonials">Depoimentos</a>
+          <a class="navbar-item button is-primary" href="#" data-i18n="nav_contact">Diga Olá</a>
         </div>
       </div>
     </div>
@@ -51,50 +58,50 @@
   <section class="section contact-section">
     <div class="container">
       <div class="columns is-centered">
-        <div class="column is-10-tablet is-8-desktop">
-          <h1 class="title is-2 has-text-centered" data-aos="fade-up">Vamos conversar</h1>
-          <p class="subtitle is-5 has-text-centered mb-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="column is-12-mobile is-10-tablet is-8-desktop">
+          <h1 class="title is-2 has-text-centered" data-i18n="contact_heading">Vamos conversar</h1>
+          <p class="subtitle is-5 has-text-centered mb-6" data-i18n="contact_subheading">
             Tem um projeto em mente? Preencha o formulário abaixo ou entre em contato diretamente.
           </p>
 
           <div class="box contact-form-box" data-aos="fade-up" data-aos-delay="200">
-            <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/murilopereira1461@gmail.com" method="POST">
+            <form id="contactForm" action="https://formsubmit.co/ajax/murilopereira1461@gmail.com" method="POST">
               <input type="hidden" name="_subject" value="Nova mensagem do site">
               <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_captcha" value="false">
 
               <div class="field">
-                <label class="label" for="name">Nome</label>
+                <label class="label" for="name" data-i18n="form_name_label">Nome</label>
                 <div class="control has-icons-left">
-                  <input class="input" type="text" id="name" name="name" placeholder="Seu nome" required>
+                  <input class="input" type="text" id="name" name="name" placeholder="Seu nome" required data-i18n="form_name_placeholder">
                   <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
-                  <p class="help is-danger error-message" style="display: none;">Por favor, informe seu nome</p>
+                  <p class="help is-danger error-message" style="display: none;" data-i18n="contact_name_error">Por favor, informe seu nome</p>
                 </div>
               </div>
 
               <div class="field">
-                <label class="label" for="email">Email</label>
+                <label class="label" for="email" data-i18n="form_email_label">Email</label>
                 <div class="control has-icons-left">
-                  <input class="input" type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                  <input class="input" type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required data-i18n="form_email_placeholder">
                   <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
-                  <p class="help is-danger error-message" style="display: none;">Por favor, informe um email válido</p>
+                  <p class="help is-danger error-message" style="display: none;" data-i18n="contact_email_error">Por favor, informe um email válido</p>
                 </div>
               </div>
 
               <div class="field">
-                <label class="label" for="subject">Assunto</label>
+                <label class="label" for="subject" data-i18n="form_subject_label">Assunto</label>
                 <div class="control has-icons-left">
-                  <input class="input" type="text" id="subject" name="subject" placeholder="Do que se trata?" required>
+                  <input class="input" type="text" id="subject" name="subject" placeholder="Do que se trata?" required data-i18n="form_subject_placeholder">
                   <span class="icon is-small is-left"><i class="fas fa-tag"></i></span>
-                  <p class="help is-danger error-message" style="display: none;">Por favor, informe o assunto</p>
+                  <p class="help is-danger error-message" style="display: none;" data-i18n="contact_subject_error">Por favor, informe o assunto</p>
                 </div>
               </div>
 
               <div class="field">
-                <label class="label" for="message">Mensagem</label>
+                <label class="label" for="message" data-i18n="form_message_label">Mensagem</label>
                 <div class="control">
-                  <textarea class="textarea" id="message" name="message" placeholder="Conte-me sobre seu projeto ou dúvida..." rows="6" required></textarea>
-                  <p class="help is-danger error-message" style="display: none;">Por favor, escreva sua mensagem</p>
+                  <textarea class="textarea" id="message" name="message" placeholder="Conte-me sobre seu projeto ou dúvida..." rows="6" required data-i18n="form_message_placeholder"></textarea>
+                  <p class="help is-danger error-message" style="display: none;" data-i18n="contact_message_error">Por favor, escreva sua mensagem</p>
                 </div>
               </div>
 
@@ -102,144 +109,89 @@
                 <div class="control has-text-centered">
                   <button type="submit" class="button submit-button">
                     <span class="icon"><i class="fas fa-paper-plane"></i></span>
-                    <span>Enviar mensagem</span>
+                    <span data-i18n="form_send_button">Enviar mensagem</span>
                   </button>
                 </div>
               </div>
             </form>
-
-            <!-- Mensagem de sucesso/erro (inicialmente oculta) -->
             <div id="formMessage" class="notification is-hidden"></div>
           </div>
         </div>
       </div>
     </div>
-
-    <footer class="footer has-text-centered">
-      <div class="content">
-        <img src="../assets/images/logo-new.png" alt="Murilo Baron" width="40">
-        <p class="mt-4">Vivendo, aprendendo e evoluindo um dia de cada vez.</p>
-        <div class="buttons is-centered social-buttons">
-          <a href="https://x.com/Barondeveloper" class="button is-white is-inverted" aria-label="Twitter">
-            <span class="icon"><i class="fab fa-twitter"></i></span>
-          </a>
-          <a href="https://github.com/Murilo-Baron" class="button is-white is-inverted" aria-label="GitHub">
-            <span class="icon"><i class="fab fa-github"></i></span>
-          </a>
-          <a href="https://www.linkedin.com/in/murilo-baron-pereira" class="button is-white is-inverted" aria-label="LinkedIn">
-            <span class="icon"><i class="fab fa-linkedin"></i></span>
-          </a>
-          <a href="https://www.instagram.com/rilobaron/?next=%2F" class="button is-white is-inverted" aria-label="Instagram">
-            <span class="icon"><i class="fab fa-instagram"></i></span>
-          </a>
-          <a href="./pages/contact.html" class="button is-white is-inverted" aria-label="Email">
-            <span class="icon"><i class="fas fa-envelope"></i></span>
-          </a>
-        </div>
-        <p>Feito com <span class="has-text-secondary">💜</span> por Murilo Baron Pereira.</p>
-      </div>
-    </footer>
   </section>
 
+  <footer class="footer has-text-centered">
+    <div class="content">
+      <img src="../assets/images/logo-new.png" alt="Murilo Baron" width="40">
+      <p class="mt-4" data-i18n="footer_text">Vivendo, aprendendo e evoluindo um dia de cada vez.</p>
+      <div class="buttons is-centered social-buttons">
+        <a href="https://x.com/Barondeveloper" class="button is-white is-inverted" aria-label="Twitter"><span class="icon"><i class="fab fa-twitter"></i></span></a>
+        <a href="https://github.com/Murilo-Baron" class="button is-white is-inverted" aria-label="GitHub"><span class="icon"><i class="fab fa-github"></i></span></a>
+        <a href="https://www.linkedin.com/in/murilo-baron-pereira" class="button is-white is-inverted" aria-label="LinkedIn"><span class="icon"><i class="fab fa-linkedin"></i></span></a>
+        <a href="https://www.instagram.com/rilobaron" class="button is-white is-inverted" aria-label="Instagram"><span class="icon"><i class="fab fa-instagram"></i></span></a>
+        <a href="./pages/contact.html" class="button is-white is-inverted" aria-label="Email"><span class="icon"><i class="fas fa-envelope"></i></span></a>
+      </div>
+      <p data-i18n="footer_signature">Feito com <span class="has-text-secondary">💜</span> por Murilo Baron Pereira.</p>
+    </div>
+  </footer>
+
+  <!-- Traduções e idioma -->
+  <script>
+    const translations = {
+      "pt-BR": {
+        contact_page_title: "Contato • Murilo Baron",
+        contact_heading: "Vamos conversar",
+        contact_subheading: "Tem um projeto em mente? Preencha o formulário abaixo ou entre em contato diretamente.",
+        form_name_label: "Nome",
+        form_name_placeholder: "Seu nome",
+        contact_name_error: "Por favor, informe seu nome",
+        form_email_label: "Email",
+        form_email_placeholder: "seu.email@exemplo.com",
+        contact_email_error: "Por favor, informe um email válido",
+        form_subject_label: "Assunto",
+        form_subject_placeholder: "Do que se trata?",
+        contact_subject_error: "Por favor, informe o assunto",
+        form_message_label: "Mensagem",
+        form_message_placeholder: "Conte-me sobre seu projeto ou dúvida...",
+        contact_message_error: "Por favor, escreva sua mensagem",
+        form_send_button: "Enviar mensagem",
+        footer_text: "Vivendo, aprendendo e evoluindo um dia de cada vez.",
+        footer_signature: "Feito com 💜 por Murilo Baron Pereira",
+        nav_about: "Sobre",
+        nav_projects: "Projetos",
+        nav_testimonials: "Depoimentos",
+        nav_contact: "Diga Olá"
+      },
+      "en": {
+        contact_page_title: "Contact • Murilo Baron",
+        contact_heading: "Let's talk",
+        contact_subheading: "Got a project in mind? Fill out the form below or get in touch directly.",
+        form_name_label: "Name",
+        form_name_placeholder: "Your name",
+        contact_name_error: "Please enter your name",
+        form_email_label: "Email",
+        form_email_placeholder: "your.email@example.com",
+        contact_email_error: "Please enter a valid email",
+        form_subject_label: "Subject",
+        form_subject_placeholder: "What's it about?",
+        contact_subject_error: "Please enter the subject",
+        form_message_label: "Message",
+        form_message_placeholder: "Tell me about your project or question...",
+        contact_message_error: "Please enter your message",
+        form_send_button: "Send message",
+        footer_text: "Living, learning, and growing one day at a time.",
+        footer_signature: "Made with 💜 by Murilo Baron Pereira",
+        nav_about: "About",
+        nav_projects: "Projects",
+        nav_testimonials: "Testimonials",
+        nav_contact: "Say Hello"
+      }
+    };
+  </script>
+  <script src="../language-detector.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="../assets/js/script.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true,
-      offset: 100
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-      const contactForm = document.getElementById('contactForm');
-      const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
-      const errorMessages = contactForm.querySelectorAll('.error-message');
-      const formMessage = document.getElementById('formMessage');
-
-      function isValidEmail(email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-      }
-
-      inputs.forEach((input, index) => {
-        input.addEventListener('blur', function () {
-          validateField(input, index);
-        });
-        input.addEventListener('input', function () {
-          if (input.classList.contains('is-danger')) {
-            validateField(input, index);
-          }
-        });
-      });
-
-      function validateField(input, index) {
-        let isValid = true;
-        if (input.type === 'email') {
-          isValid = isValidEmail(input.value.trim());
-        } else {
-          isValid = input.value.trim() !== '';
-        }
-        if (!isValid) {
-          input.classList.add('is-danger');
-          if (errorMessages[index]) errorMessages[index].style.display = 'block';
-        } else {
-          input.classList.remove('is-danger');
-          if (errorMessages[index]) errorMessages[index].style.display = 'none';
-        }
-        return isValid;
-      }
-
-      if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-          e.preventDefault();
-
-          // Validação dos campos antes de enviar
-          let formIsValid = true;
-          inputs.forEach((input, index) => {
-            if (!validateField(input, index)) formIsValid = false;
-          });
-          if (!formIsValid) return;
-
-          // Envio via AJAX para FormSubmit
-          const formData = new FormData(contactForm);
-          fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-          })
-            .then(response => response.json())
-            .then(data => {
-              // Limpa o formulário e exibe mensagem de sucesso
-              contactForm.reset();
-              formMessage.classList.remove('is-hidden', 'is-danger');
-              formMessage.classList.add('is-success');
-              formMessage.innerText = 'Sua mensagem foi enviada com sucesso. Obrigado!';
-              // Após alguns segundos, oculta a notificação (opcional)
-              setTimeout(() => {
-                formMessage.classList.add('is-hidden');
-              }, 7000);
-            })
-            .catch(error => {
-              // Exibe mensagem de erro
-              formMessage.classList.remove('is-hidden', 'is-success');
-              formMessage.classList.add('is-danger');
-              formMessage.innerText = 'Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.';
-            });
-        });
-      }
-
-      const navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-      if (navbarBurgers.length > 0) {
-        navbarBurgers.forEach(el => {
-          el.addEventListener('click', () => {
-            const target = document.getElementById(el.dataset.target);
-            el.classList.toggle('is-active');
-            target.classList.toggle('is-active');
-          });
-        });
-      }
-    });
-  </script>
 </body>
 
 </html>

@@ -19,11 +19,12 @@
 
 <body>
 
+
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
-          <img src="assets/images/logo-new.png" alt="Murilo Baron" width="40">
+          <img src="assets/images/logo-new.png" alt="Murilo Baron Pereira" width="40">
         </a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
           <span aria-hidden="true"></span>
@@ -306,6 +307,32 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="assets/js/script.js"></script>
   <script>
+    const translations = {
+      "pt-BR": {
+        nav_about: "Sobre",
+        nav_projects: "Projetos",
+        nav_testimonials: "Depoimentos",
+        nav_contact: "Diga Olá",
+        footer_signature: "Feito com 💜 por Murilo Baron Pereira"
+      },
+      "en": {
+        nav_about: "About",
+        nav_projects: "Projects",
+        nav_testimonials: "Testimonials",
+        nav_contact: "Say Hello",
+        footer_signature: "Made with 💜 by Murilo Baron Pereira"
+      },
+      "es": {
+        nav_about: "Sobre mí",
+        nav_projects: "Proyectos",
+        nav_testimonials: "Testimonios",
+        nav_contact: "Saludar",
+        footer_signature: "Hecho con 💜 por Murilo Baron Pereira"
+      }
+    };
+  </script>
+  <script src="language-detector.js"></script> <!-- Script de detecção de idioma -->
+  <script>
     AOS.init({
       duration: 800,
       once: true,
@@ -314,21 +341,22 @@
 
     window.addEventListener('scroll', function () {
       const backToTop = document.getElementById('back-to-top');
-      if (window.scrollY > 300) {
-        backToTop.style.display = 'block';
-      } else {
-        backToTop.style.display = 'none';
-      }
+      backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
     });
 
     document.getElementById('back-to-top').addEventListener('click', function (e) {
       e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const currentLang = loadLanguagePreference();
+      changeLanguage(currentLang);
     });
   </script>
+
 </body>
+
+</html>
 
 </html>
