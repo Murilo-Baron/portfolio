@@ -251,7 +251,7 @@ img,
 }
 
 /* --------------------------------------------------
-   PROJECT TILES (3 colunas no desktop, retângulos)
+   PROJECT TILES (retângulos mais achatados para menos scroll)
    -------------------------------------------------- */
 
 /* Container geral de projetos */
@@ -268,7 +268,7 @@ img,
   gap: 1.5rem;
 }
 
-/* Cada tile ocupa 100% da largura da coluna e mantém 16:9 */
+/* Cada tile ocupa 100% da largura da coluna e mantém proporção 2:1 */
 .project-tile {
   background: #f4f4f4;
   border-radius: var(--border-radius-md);
@@ -277,15 +277,8 @@ img,
   transition: transform var(--transition-normal);
   background-size: cover;
   background-position: center;
-
-  /* Garante que a largura seja 100% da coluna */
   width: 100%;
-  /* Proporção 16:9 */
-  aspect-ratio: 16 / 9;
-  /* Caso precise de fallback:
-     height: 0;
-     padding-bottom: 56.25%;
-  */
+  aspect-ratio: 2 / 1;
 }
 
 /* Efeito hover */
@@ -763,9 +756,9 @@ img,
 
   /* Fallback para project-tile, caso aspect-ratio não funcione */
   .project-tile {
-    flex: 1 1 45%;
-    max-width: 45%;
-    height: 220px; /* fallback */
+    aspect-ratio: auto;
+    width: 100%;
+    height: 180px;
   }
 
   .project-overlay {
@@ -828,9 +821,9 @@ img,
 
   /* Em tablets menores, cada tile ocupa 100% */
   .project-tile {
-    flex: 1 1 100%;
-    max-width: 100%;
-    height: 200px; /* fallback */
+    aspect-ratio: auto;
+    width: 100%;
+    height: 150px;
     margin-bottom: 1rem;
   }
 
@@ -891,7 +884,9 @@ img,
 
   /* Em telas muito pequenas, o tile fica um pouco mais alto */
   .project-tile {
-    height: 180px; /* fallback */
+    aspect-ratio: auto;
+    width: 100%;
+    height: 120px;
   }
 
   .project-overlay {
