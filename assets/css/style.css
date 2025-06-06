@@ -101,6 +101,8 @@ h6 {
   background-color: white;
   box-shadow: var(--shadow-md);
   transition: transform var(--transition-normal);
+  max-width: 100%;
+  height: auto;
 }
 
 .avatar:hover {
@@ -135,6 +137,7 @@ h6 {
 
 .tech-illustration {
   max-width: 600px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
   display: block;
@@ -146,6 +149,7 @@ h6 {
   position: relative;
   overflow: hidden;
   margin-top: 3rem; /* Adicionado espaço para separar da ilustração */
+  margin-bottom: 3rem; /* Ajuste corrigido de margin-bottom */
 }
 
 .hero-intro::before {
