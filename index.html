@@ -21,10 +21,11 @@
 </head>
 
 <body>
+  <!-- Navbar -->
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <a class="navbar-item" href="#">
+        <a class="navbar-item" href="#home">
           <img src="assets/images/logo-new.png" alt="Murilo Baron Pereira" width="40">
         </a>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
@@ -44,6 +45,7 @@
     </div>
   </nav>
 
+  <!-- Hero principal -->
   <section class="section has-text-centered hero-main" id="home">
     <div class="container">
       <h1 class="title is-2 has-text-weight-bold" data-aos="fade-up">
@@ -61,17 +63,23 @@
     </div>
   </section>
 
-  <section class="hero is-medium hero-intro" id="sobre" style="margin-bottom: 5;">
-    <div class="hero-body has-text-centered">
-      <div class="container">
-        <h2 class="title is-3" data-aos="fade-up" style="margin-bottom: 5%;">Oi, sou Murilo Baron Pereira. Prazer em te conhecer.</h2>
-        <p class="subtitle is-5 mx-auto" style="max-width:700px" data-aos="fade-up" data-aos-delay="100">
-          Desde que comecei minha jornada como programador há 3 anos, já trabalhei remotamente para agências, startups e colaborei com pessoas talentosas para criar produtos digitais. Sou naturalmente curioso, apaixonado por design e estou sempre buscando aprimorar minhas habilidades para entregar soluções que combinam estética e funcionalidade.
+  <!-- Hero-roxo de introdução (Sobre) -->
+  <section class="hero is-medium hero-intro" id="sobre">
+    <div class="hero-body">
+      <div class="container is-narrow has-text-centered">
+        <h2 class="title is-3" data-aos="fade-up">
+          Oi, sou Murilo Baron Pereira. Prazer em te conhecer.
+        </h2>
+        <p class="subtitle is-5 mx-auto" data-aos="fade-up" data-aos-delay="100">
+          Desde que comecei minha jornada como programador há 3 anos, já trabalhei remotamente para agências, startups e colaborei com
+          pessoas talentosas para criar produtos digitais. Sou naturalmente curioso, apaixonado por design e estou sempre buscando
+          aprimorar minhas habilidades para entregar soluções que combinam estética e funcionalidade.
         </p>
       </div>
     </div>
   </section>
 
+  <!-- Cards sobrepostos -->
   <section class="section cards-overlap">
     <div class="container">
       <div class="columns is-multiline is-variable is-6">
@@ -118,6 +126,7 @@
     </div>
   </section>
 
+  <!-- Meus Projetos Recentes -->
   <section id="projetos" class="section project-section has-text-centered">
     <div class="container">
       <h2 class="title is-3" data-aos="fade-up">Meus Projetos Recentes</h2>
@@ -125,7 +134,12 @@
         Aqui estão alguns trabalhos recentes que desenvolvi. Quer ver mais?
         <a href="pages/contact.html" class="has-text-primary">Entre em contato</a>.
       </p>
-      <div class="columns is-multiline is-variable is-5 is-centered" data-aos="fade-up" data-aos-delay="200">
+
+      <!-- Grade de projetos com 3 colunas no desktop, 2 no tablet e 1 no mobile -->
+      <div class="columns is-multiline is-variable is-5 is-centered project-columns" data-aos="fade-up" data-aos-delay="200">
+        <!-- Cada coluna abaixo usa "is-4-desktop is-6-tablet" para garantir 3 colunas no desktop -->
+
+        <!-- Projeto 1 -->
         <div class="column is-4-desktop is-6-tablet">
           <div class="project-tile" style="background-image: url('assets/images/projects/project1.jpg')">
             <div class="project-overlay">
@@ -138,6 +152,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Projeto 2 -->
         <div class="column is-4-desktop is-6-tablet">
           <div class="project-tile" style="background-image: url('assets/images/projects/project2.jpg')">
             <div class="project-overlay">
@@ -150,6 +166,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Projeto 3 -->
         <div class="column is-4-desktop is-6-tablet">
           <div class="project-tile" style="background-image: url('assets/images/projects/project3.jpg')">
             <div class="project-overlay">
@@ -162,6 +180,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Projeto 4 -->
         <div class="column is-4-desktop is-6-tablet">
           <div class="project-tile" style="background-image: url('assets/images/projects/project4.jpg')">
             <div class="project-overlay">
@@ -174,6 +194,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Projeto 5 -->
         <div class="column is-4-desktop is-6-tablet">
           <div class="project-tile" style="background-image: url('assets/images/projects/project5.jpg')">
             <div class="project-overlay">
@@ -186,6 +208,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Projeto 6 -->
         <div class="column is-4-desktop is-6-tablet">
           <div class="project-tile" style="background-image: url('assets/images/projects/project6.jpg')">
             <div class="project-overlay">
@@ -199,6 +223,8 @@
           </div>
         </div>
       </div>
+      <!-- Fim da grade de projetos -->
+
       <a href="https://github.com/Murilo-Baron" class="button is-outlined is-primary mt-5" data-aos="fade-up" data-aos-delay="300">
         <span class="icon"><i class="fab fa-github"></i></span>
         <span>Ver mais no GitHub</span>
@@ -206,6 +232,7 @@
     </div>
   </section>
 
+  <!-- Depoimentos -->
   <section id="testimonials" class="section has-text-centered">
     <div class="container">
       <h2 class="title is-3" data-aos="fade-up">Depoimentos</h2>
@@ -218,9 +245,7 @@
         <blockquote class="mt-4">
           "O Murilo é um profissional altamente competente e versátil, com uma habilidade notável para lidar com desafios complexas. Sua postura ética e colaborativa, transforma a rotina da equipe, pois está sempre disposto a orientar e compartilhar experiências, o que torna o ambiente profissional muito produtivo e enriquecedor."
         </blockquote>
-        <p class="has-text-weight-semibold mt-3">
-          Aline Freitas
-        </p>
+        <p class="has-text-weight-semibold mt-3">Aline Freitas</p>
         <p class="is-size-7">Analista de Suporte II, Sprinthub</p>
       </div>
 
@@ -231,9 +256,7 @@
         <blockquote class="mt-4">
           "Excelente Analista de Suporte e profissional da área da tecnologia e programação. Super atencioso com os clientes e com os colegas. Compartilhando conhecimento, auxiliando e ensinando."
         </blockquote>
-        <p class="has-text-weight-semibold mt-3">
-          Pamela S. F. Pitanga
-        </p>
+        <p class="has-text-weight-semibold mt-3">Pamela S. F. Pitanga</p>
         <p class="is-size-7">Analista de Onboarding, Sprinthub</p>
       </div>
 
@@ -244,9 +267,7 @@
         <blockquote class="mt-4">
           "Murilo é um profissional extremamente dedicado e eficiente. Sempre disposto a colaborar, traz soluções rápidas e inteligentes para os desafios do dia a dia."
         </blockquote>
-        <p class="has-text-weight-semibold mt-3">
-          João Antonio
-        </p>
+        <p class="has-text-weight-semibold mt-3">João Antonio</p>
         <p class="is-size-7">Analista de Suporte II, Sprinthub</p>
       </div>
 
@@ -258,6 +279,7 @@
     </div>
   </section>
 
+  <!-- CTA: Vamos trabalhar juntos? -->
   <section class="section">
     <div class="container">
       <div class="cta-bar mx-auto" data-aos="fade-up">
@@ -277,6 +299,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer has-text-centered">
     <div class="content">
       <img src="assets/images/logo-new.png" alt="Murilo Baron" width="40">
@@ -302,12 +325,14 @@
     </div>
   </footer>
 
+  <!-- Botão “voltar ao topo” -->
   <a href="#" id="back-to-top" class="button is-primary is-rounded" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 99;">
     <span class="icon">
       <i class="fas fa-arrow-up"></i>
     </span>
   </a>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="assets/js/script.js"></script>
   <script>
