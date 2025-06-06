@@ -250,17 +250,13 @@ img,
   color: var(--primary-color);
 }
 
-/* --------------------------------------------------
-   PROJECT TILES (retângulos mais achatados para menos scroll)
-   -------------------------------------------------- */
-
-/* Container geral de projetos */
+/* Project tiles */
 .project-section {
   padding: 5rem 1rem;
   text-align: center;
 }
 
-/* Mantém o wrapper flex das colunas */
+/* Aqui definimos o wrapper de colunas personalizado */
 .project-section .columns {
   display: flex;
   flex-wrap: wrap;
@@ -268,7 +264,7 @@ img,
   gap: 1.5rem;
 }
 
-/* Cada tile ocupa 100% da largura da coluna e mantém proporção 2:1 */
+/* Ajustamos a tile para ocupar 100% da coluna e ter proporção horizontal */
 .project-tile {
   background: #f4f4f4;
   border-radius: var(--border-radius-md);
@@ -277,16 +273,24 @@ img,
   transition: transform var(--transition-normal);
   background-size: cover;
   background-position: center;
+
+  /* Ocupa toda a largura da coluna */
   width: 100%;
-  aspect-ratio: 2 / 1;
+
+  /* Define proporção horizontal 16:9 */
+  aspect-ratio: 16 / 9;
+  /* Caso precise usar fallback:
+     height: 0;
+     padding-bottom: 56.25%;
+  */
 }
 
-/* Efeito hover */
+/* Hover do tile */
 .project-tile:hover {
   transform: translateY(-10px);
 }
 
-/* Overlay que aparece ao passar o mouse */
+/* Overlay do projeto */
 .project-overlay {
   position: absolute;
   top: 0;
@@ -343,7 +347,9 @@ img,
   color: var(--dark-bg);
 }
 
-/* Desktop (≥ 1025px): 3 colunas de 33.33% */
+/* Media Queries para a grade de projetos */
+
+/* Desktop (≥ 1025px): 3 colunas, cada coluna 33.33% */
 @media screen and (min-width: 1025px) {
   .columns.project-columns .column {
     flex: 0 0 33.3333%;
@@ -351,7 +357,7 @@ img,
   }
 }
 
-/* Tablet (769px – 1024px): 2 colunas de 50% */
+/* Tablet (769px – 1024px): 2 colunas, cada coluna 50% */
 @media screen and (max-width: 1024px) and (min-width: 769px) {
   .columns.project-columns .column {
     flex: 0 0 50%;
@@ -359,7 +365,7 @@ img,
   }
 }
 
-/* Mobile (≤ 768px): 1 coluna de 100% */
+/* Mobile (≤ 768px): 1 coluna, cada coluna 100% */
 @media screen and (max-width: 768px) {
   .columns.project-columns .column {
     flex: 0 0 100%;
@@ -754,11 +760,11 @@ img,
     max-width: 500px;
   }
 
-  /* Fallback para project-tile, caso aspect-ratio não funcione */
+  /* Ajuste dos tiles em modo “fallback” (caso precise) */
   .project-tile {
-    aspect-ratio: auto;
-    width: 100%;
-    height: 180px;
+    flex: 1 1 45%;
+    max-width: 45%;
+    height: 220px; /* fallback quando aspect-ratio não estiver disponível */
   }
 
   .project-overlay {
@@ -821,9 +827,9 @@ img,
 
   /* Em tablets menores, cada tile ocupa 100% */
   .project-tile {
-    aspect-ratio: auto;
-    width: 100%;
-    height: 150px;
+    flex: 1 1 100%;
+    max-width: 100%;
+    height: 200px; /* fallback */
     margin-bottom: 1rem;
   }
 
@@ -884,9 +890,7 @@ img,
 
   /* Em telas muito pequenas, o tile fica um pouco mais alto */
   .project-tile {
-    aspect-ratio: auto;
-    width: 100%;
-    height: 120px;
+    height: 180px; /* fallback */
   }
 
   .project-overlay {
