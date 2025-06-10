@@ -17,6 +17,10 @@
   --transition-slow: 0.5s ease;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
 /* Tipografia geral */
 body {
   font-family: "Inter", sans-serif;
@@ -101,8 +105,6 @@ h6 {
   background-color: white;
   box-shadow: var(--shadow-md);
   transition: transform var(--transition-normal);
-  max-width: 100%;
-  height: auto;
 }
 
 .avatar:hover {
@@ -130,16 +132,14 @@ h6 {
 .tech-illustration-container {
   position: relative;
   width: 100%;
-  height: auto; /* Alterado de altura fixa para auto */
-  margin-top: 2rem;
+  max-width: 600px; /* limite no desktop */
+  margin: 2rem auto 0 auto; /* centraliza a imagem */
   overflow: hidden;
 }
 
 .tech-illustration {
-  max-width: 600px;
-  width: 100%;
+  width: 100%; /* sempre ocupar o container */
   height: auto;
-  margin: 0 auto;
   display: block;
 }
 
@@ -149,7 +149,6 @@ h6 {
   position: relative;
   overflow: hidden;
   margin-top: 3rem; /* Adicionado espaço para separar da ilustração */
-  margin-bottom: 3rem; /* Ajuste corrigido de margin-bottom */
 }
 
 .hero-intro::before {
@@ -499,13 +498,10 @@ h6 {
 }
 
 .contact-form-box {
-  padding: 1rem; /* menos espaço interno */
-  margin-bottom: 20rem; /* espaço visível entre form e footer */
+  padding: 1rem;
+  margin-bottom: 2rem;
   background-color: #f9f9fb;
-
-  /* Limita a altura e habilita scroll interno */
-  max-height: 70vh;
-  overflow-y: auto;
+  box-sizing: border-box;
   box-sizing: border-box;
 }
 
