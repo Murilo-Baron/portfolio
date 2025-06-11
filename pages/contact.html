@@ -48,7 +48,7 @@
     </div>
   </nav>
 
-  <section class="section contact-section">
+  <section class="section contact-section" style="margin-bottom: 10%;">
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-10-tablet is-8-desktop">
@@ -114,32 +114,32 @@
         </div>
       </div>
     </div>
-
-    <footer class="footer has-text-centered">
-      <div class="content">
-        <img src="../assets/images/logo-new.png" alt="Murilo Baron" width="40">
-        <p class="mt-4">Vivendo, aprendendo e evoluindo um dia de cada vez.</p>
-        <div class="buttons is-centered social-buttons">
-          <a href="https://x.com/Barondeveloper" class="button is-white is-inverted" aria-label="Twitter">
-            <span class="icon"><i class="fab fa-twitter"></i></span>
-          </a>
-          <a href="https://github.com/Murilo-Baron" class="button is-white is-inverted" aria-label="GitHub">
-            <span class="icon"><i class="fab fa-github"></i></span>
-          </a>
-          <a href="https://www.linkedin.com/in/murilo-baron-pereira" class="button is-white is-inverted" aria-label="LinkedIn">
-            <span class="icon"><i class="fab fa-linkedin"></i></span>
-          </a>
-          <a href="https://www.instagram.com/rilobaron/?next=%2F" class="button is-white is-inverted" aria-label="Instagram">
-            <span class="icon"><i class="fab fa-instagram"></i></span>
-          </a>
-          <a href="./pages/contact.html" class="button is-white is-inverted" aria-label="Email">
-            <span class="icon"><i class="fas fa-envelope"></i></span>
-          </a>
-        </div>
-        <p>Feito com <span class="has-text-secondary">💜</span> por Murilo Baron Pereira.</p>
-      </div>
-    </footer>
   </section>
+
+  <footer class="footer has-text-centered">
+    <div class="content">
+      <img src="../assets/images/logo-new.png" alt="Murilo Baron" width="40">
+      <p class="mt-4">Vivendo, aprendendo e evoluindo um dia de cada vez.</p>
+      <div class="buttons is-centered social-buttons">
+        <a href="https://x.com/Barondeveloper" class="button is-white is-inverted" aria-label="Twitter">
+          <span class="icon"><i class="fab fa-twitter"></i></span>
+        </a>
+        <a href="https://github.com/Murilo-Baron" class="button is-white is-inverted" aria-label="GitHub">
+          <span class="icon"><i class="fab fa-github"></i></span>
+        </a>
+        <a href="https://www.linkedin.com/in/murilo-baron-pereira" class="button is-white is-inverted" aria-label="LinkedIn">
+          <span class="icon"><i class="fab fa-linkedin"></i></span>
+        </a>
+        <a href="https://www.instagram.com/rilobaron/?next=%2F" class="button is-white is-inverted" aria-label="Instagram">
+          <span class="icon"><i class="fab fa-instagram"></i></span>
+        </a>
+        <a href="./pages/contact.html" class="button is-white is-inverted" aria-label="Email">
+          <span class="icon"><i class="fas fa-envelope"></i></span>
+        </a>
+      </div>
+      <p>Feito com <span class="has-text-secondary">💜</span> por Murilo Baron Pereira.</p>
+    </div>
+  </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="../assets/js/script.js"></script>
@@ -193,14 +193,12 @@
         contactForm.addEventListener('submit', function (e) {
           e.preventDefault();
 
-          // Validação dos campos antes de enviar
           let formIsValid = true;
           inputs.forEach((input, index) => {
             if (!validateField(input, index)) formIsValid = false;
           });
           if (!formIsValid) return;
 
-          // Envio via AJAX para FormSubmit
           const formData = new FormData(contactForm);
           fetch(contactForm.action, {
             method: 'POST',
@@ -209,18 +207,15 @@
           })
             .then(response => response.json())
             .then(data => {
-              // Limpa o formulário e exibe mensagem de sucesso
               contactForm.reset();
               formMessage.classList.remove('is-hidden', 'is-danger');
               formMessage.classList.add('is-success');
               formMessage.innerText = 'Sua mensagem foi enviada com sucesso. Obrigado!';
-              // Após alguns segundos, oculta a notificação (opcional)
               setTimeout(() => {
                 formMessage.classList.add('is-hidden');
               }, 7000);
             })
             .catch(error => {
-              // Exibe mensagem de erro
               formMessage.classList.remove('is-hidden', 'is-success');
               formMessage.classList.add('is-danger');
               formMessage.innerText = 'Ocorreu um erro ao enviar sua mensagem. Por favor, tente novamente.';

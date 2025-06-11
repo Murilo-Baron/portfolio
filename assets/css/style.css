@@ -132,13 +132,13 @@ h6 {
 .tech-illustration-container {
   position: relative;
   width: 100%;
-  max-width: 600px; /* limite no desktop */
-  margin: 2rem auto 0 auto; /* centraliza a imagem */
+  max-width: 600px;
+  margin: 2rem auto 0 auto;
   overflow: hidden;
 }
 
 .tech-illustration {
-  width: 100%; /* sempre ocupar o container */
+  width: 100%;
   height: auto;
   display: block;
 }
@@ -148,7 +148,7 @@ h6 {
   background-color: var(--primary-color) !important;
   position: relative;
   overflow: hidden;
-  margin-top: 3rem; /* Adicionado espaço para separar da ilustração */
+  margin-top: 3rem;
 }
 
 .hero-intro::before {
@@ -410,8 +410,8 @@ h6 {
   background-color: var(--primary-color);
   color: #fff;
   padding: 4rem 1rem;
-  margin-top: 3rem; /* Espaçamento extra entre form e footer */
-  width: 100%; /* Garante full-width */
+  margin-top: 2rem; /* ajustado para 2rem */
+  width: 100%;
 }
 
 .footer .content {
@@ -493,16 +493,14 @@ h6 {
 
 /* Contact page */
 .contact-section {
-  padding: 5rem 0 0; /* mantém top padding original */
+  padding: 5rem 0 0;
   margin-bottom: 0;
+  background-color: #fff;
 }
 
 .contact-form-box {
   padding: 1rem;
-  margin-bottom: 2rem;
-  background-color: #f9f9fb;
-  box-sizing: border-box;
-  box-sizing: border-box;
+  margin-bottom: 0; /* zerado para encostar no footer */
 }
 
 .contact-form .field {
@@ -510,7 +508,7 @@ h6 {
 }
 
 .contact-form .field:last-child {
-  margin-bottom: 0; /* Remove margem do último campo */
+  margin-bottom: 0;
 }
 
 .contact-form .label {
@@ -534,28 +532,27 @@ h6 {
 
 /* Botão “Enviar mensagem” com ícone centralizado */
 .contact-form .submit-button {
-  display: inline-flex; /* torna o botão um flex container */
-  align-items: center; /* centraliza verticalmente ícone e texto */
-  justify-content: center; /* centraliza horizontalmente */
-  gap: 0.5rem; /* espaço entre ícone e texto */
-  padding: 0.6rem 1.5rem; /* ajuste de padding */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 24px;
   background-color: var(--primary-color);
   color: #fff;
   border: none;
   font-weight: 600;
   transition: all var(--transition-normal);
-
-  line-height: 1; /* garante que texto e ícone usem mesma altura de linha */
+  line-height: 1;
 }
 
 .contact-form .submit-button .icon {
-  display: inline-flex; /* garante que o span seja flex container */
-  align-items: center; /* centraliza o <i> verticalmente */
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
   margin: 0;
   line-height: 1;
-  font-size: 1rem; /* ajuste do tamanho do ícone */
+  font-size: 1rem;
 }
 
 .contact-form .submit-button:hover {
@@ -568,12 +565,10 @@ h6 {
   background-color: #48c774;
 }
 
-/* Remove margens extras no ícone + texto (já usamos gap) */
 .submit-button .icon + span {
   margin-left: 0;
 }
 
-/* Melhor transição de foco nos inputs */
 .contact-form .input:focus,
 .contact-form .textarea:focus {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -616,8 +611,8 @@ h6 {
   }
 
   .contact-form-box {
-    padding: 0.75rem; /* ainda mais compacto no mobile */
-    margin-bottom: 2rem; /* mantém gap para o footer */
+    padding: 0.75rem;
+    margin-bottom: 1rem;
     background-color: #f9f9fb;
     max-height: 70vh;
     overflow-y: auto;
@@ -625,7 +620,7 @@ h6 {
   }
 
   .contact-section {
-    padding: 5rem 0 2rem; /* espaçamento extra antes do footer */
+    padding: 5rem 0 2rem;
     margin-bottom: 0;
   }
 
@@ -684,23 +679,18 @@ h6 {
 .has-text-primary {
   color: var(--primary-color) !important;
 }
-
 .has-text-secondary {
   color: var(--secondary-color) !important;
 }
-
 .has-background-primary {
   background-color: var(--primary-color) !important;
 }
-
 .has-background-secondary {
   background-color: var(--secondary-color) !important;
 }
-
 .has-background-light {
   background-color: var(--light-bg) !important;
 }
-
 .has-background-dark {
   background-color: var(--dark-bg) !important;
 }
